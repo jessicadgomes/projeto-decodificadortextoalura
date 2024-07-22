@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Decodificador de Texto</h1>
+        <form id="decoderForm">
+            <label for="inputText">Texto Codificado:</label>
+            <textarea id="inputText" rows="4" placeholder="Digite o texto codificado aqui..."></textarea>
+
+            <label for="encodingType">Tipo de Codificação:</label>
+            <select id="encodingType">
+                <option value="base64">Base64</option>
+                <option value="url">URL</option>
+                <option value="hex">HEX</option>
+            </select>
+
+            <button type="button" onclick="decodeText()">Decodificar</button>
+        </form>
+
+        <h2>Texto Decodificado:</h2>
+        <textarea id="outputText" rows="4" readonly></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
