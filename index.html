@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador de Texto</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Decodificador de Texto</h1>
-        <form id="decoderForm">
-            <label for="encodingType">Tipo de Codificação:</label>
-            <select id="encodingType">
-                <option value="base64">Base64</option>
-                <option value="hex">Hexadecimal</option>
-                <option value="url">URL Encoding</option>
-                <option value="caesar">Cifrado César</option>
-            </select>
-            
-            <label for="inputText">Texto Codificado:</label>
-            <textarea id="inputText" rows="4" placeholder="Insira o texto codificado aqui"></textarea>
-            
-            <button type="button" onclick="decodeText()">Decodificar</button>
-        </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Decodificador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.google.com/specimen/Inter?query=inter" rel="stylesheet">
+    </head>
 
-        <h2>Texto Decodificado:</h2>
-        <textarea id="outputText" rows="4" readonly></textarea>
-    </div>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><img src="img/logo.png"alt="Logo da Alura"></h1>
+            </div>
+        </header>
 
-    <script src="script.js"></script>
-</body>
+        <main> 
+            <section>
+                <textarea class="textoarea" required placeholder="Digite seu texto..."></textarea>
+                
+                <div class="alerta">
+                    <p>Apenas letras minúsculas e sem acento!</p>
+                </div>
+
+                <div class="botoes">
+                    <button type="button" class="criptografar" onClick="criptografia()">Criptografar</button>
+                    <button type="button" class="descriptografar" onClick="descriptografia()">Descriptografar</button>
+                </div>
+            </section>
+
+            <section class="resultado">
+                <textarea class="mensagem" cols="20 " rows="11" placeholder="Nenhuma mensagem encontrada"></textarea>
+                <button type="button" class="copiar" onClick="copia()">Copiar</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvido por Jéssica Delfino Gomes.</p>
+            <a href="https://www.linkedin.com/in/jessdg/">
+            <img src="img/linkedin.png" alt="LinkedIn"> 
+            </a>
+            <a href="https://github.com/jessicadgomes">
+            <img src="img/github.png" alt="GitHub">
+            </a>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
